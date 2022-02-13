@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/postCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="6dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivProfilePic"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:padding="5dp"
+            android:textColor="@color/textColor"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/ivProfilePic"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/editPost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/ic_draw"
+            android:visibility="invisible"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/forTint"
+            android:contentDescription="@string/deletepost" />
+
+        <TextView
+            android:id="@+id/tvSubjectExpert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:padding="4dp"
+            android:text="@string/subject"
+            android:textColor="@color/black"
+            app:layout_constraintLeft_toLeftOf="@+id/username"
+            app:layout_constraintTop_toBottomOf="@+id/username" />
+
+        <TextView
+            android:id="@+id/subjectExpert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvSubjectExpert"
+            app:layout_constraintLeft_toRightOf="@+id/tvSubjectExpert"
+            app:layout_constraintTop_toTopOf="@+id/tvSubjectExpert"
+
+            />
+
+        <TextView
+            android:id="@+id/tvCourseExpert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:padding="4dp"
+            android:text="@string/course"
+            android:textColor="@color/black"
+            app:layout_constraintLeft_toLeftOf="@+id/tvSubjectExpert"
+            app:layout_constraintTop_toBottomOf="@+id/tvSubjectExpert" />
+
+        <TextView
+            android:id="@+id/courseExpert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCourseExpert"
+            app:layout_constraintLeft_toRightOf="@+id/tvCourseExpert"
+            app:layout_constraintTop_toTopOf="@+id/tvCourseExpert"
+            />
+        <Button
+            android:id="@+id/courseBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="Course"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

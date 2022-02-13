@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "567653671921",
+    "project_id": "tfusion-439a8",
+    "storage_bucket": "tfusion-439a8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:567653671921:android:1f7a4cf0bcff38742bda50",
+        "android_client_info": {
+          "package_name": "com.krish.tfusion"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "567653671921-m9a0ccn5v6k2l5uthf0sen7v0kbi0raf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOGCWHzRsrnocvpZMi1vuuUrasU9p1yxg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "567653671921-m9a0ccn5v6k2l5uthf0sen7v0kbi0raf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
