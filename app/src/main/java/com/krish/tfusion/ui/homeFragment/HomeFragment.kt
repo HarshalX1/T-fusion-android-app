@@ -11,6 +11,7 @@ import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
+import com.krish.tfusion.R
 import com.krish.tfusion.adapter.CourseClick
 import com.krish.tfusion.adapter.TeacherAdapter
 import com.krish.tfusion.databinding.FragmentHomeBinding
@@ -52,7 +53,23 @@ class HomeFragment : Fragment(), CourseClick {
         setUpRecyclerView()
         getTutorData()
 
+        binding.topAppBar.setOnMenuItemClickListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.friendRequest -> {
+                    navigateFromHomeToFriends()
+                    true
+                }
+                else -> false
+            }
+        }
+
+
         return binding.root
+    }
+
+    private fun navigateFromHomeToFriends() {
+        val action = HomeFragmentDirections.actionHomeFragment2ToHostActivity(args.user)
+        findNavController().navigate(action)
     }
 
     private fun getTutorData() {

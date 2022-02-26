@@ -82,6 +82,9 @@
         <action
             android:id="@+id/action_homeFragment2_to_courseFragment"
             app:destination="@id/courseFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_hostActivity"
+            app:destination="@id/hostActivity" />
     </fragment>
     <fragment
         android:id="@+id/postVideoFragment"
@@ -103,4 +106,14 @@
             app:argType="com.krish.tfusion.model.Teacher"
             app:nullable="true" />
     </fragment>
+    <activity
+        android:id="@+id/hostActivity"
+        android:name="com.krish.tfusion.ui.friendFragment.activity.HostActivity"
+        android:label="activity_host"
+        tools:layout="@layout/activity_host" >
+        <argument
+            android:name="currentUser"
+            app:argType="com.krish.tfusion.model.User"
+            app:nullable="true" />
+    </activity>
 </navigation>

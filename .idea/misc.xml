@@ -5,22 +5,30 @@
       <map>
         <entry key="..\:/Android Practice/TFusion/app/src/main/res/drawable/background_fab.xml" value="0.18981481481481483" />
         <entry key="..\:/Android Practice/TFusion/app/src/main/res/drawable/complete_state_selector.xml" value="0.228125" />
+        <entry key="..\:/Android Practice/TFusion/app/src/main/res/drawable/ic_accept.xml" value="0.3675" />
         <entry key="..\:/Android Practice/TFusion/app/src/main/res/drawable/ic_menu.xml" value="0.3769230769230769" />
         <entry key="..\:/Android Practice/TFusion/app/src/main/res/drawable/ic_volume_off.xml" value="0.3671875" />
         <entry key="..\:/Android Practice/TFusion/app/src/main/res/drawable/ic_volume_up.xml" value="0.3671875" />
         <entry key="..\:/Android Practice/TFusion/app/src/main/res/layout/activity_home.xml" value="0.36666666666666664" />
+        <entry key="..\:/Android Practice/TFusion/app/src/main/res/layout/activity_host.xml" value="0.36666666666666664" />
         <entry key="..\:/Android Practice/TFusion/app/src/main/res/layout/activity_main.xml" value="0.19114583333333332" />
         <entry key="..\:/Android Practice/TFusion/app/src/main/res/layout/activity_sign_up.xml" value="0.25" />
+        <entry key="..\:/Android Practice/TFusion/app/src/main/res/layout/all_friend_row_layout.xml" value="0.35104166666666664" />
         <entry key="..\:/Android Practice/TFusion/app/src/main/res/layout/drawer_header.xml" value="0.33" />
+        <entry key="..\:/Android Practice/TFusion/app/src/main/res/layout/fragment_add.xml" value="0.36666666666666664" />
+        <entry key="..\:/Android Practice/TFusion/app/src/main/res/layout/fragment_all.xml" value="0.1984375" />
         <entry key="..\:/Android Practice/TFusion/app/src/main/res/layout/fragment_course.xml" value="0.35104166666666664" />
         <entry key="..\:/Android Practice/TFusion/app/src/main/res/layout/fragment_home.xml" value="0.22" />
         <entry key="..\:/Android Practice/TFusion/app/src/main/res/layout/fragment_login.xml" value="0.25" />
+        <entry key="..\:/Android Practice/TFusion/app/src/main/res/layout/fragment_pending.xml" value="0.1984375" />
         <entry key="..\:/Android Practice/TFusion/app/src/main/res/layout/fragment_post_video.xml" value="0.35104166666666664" />
         <entry key="..\:/Android Practice/TFusion/app/src/main/res/layout/fragment_second.xml" value="0.36666666666666664" />
         <entry key="..\:/Android Practice/TFusion/app/src/main/res/layout/fragment_sign_up.xml" value="0.36666666666666664" />
         <entry key="..\:/Android Practice/TFusion/app/src/main/res/layout/fragment_student.xml" value="0.20520833333333333" />
         <entry key="..\:/Android Practice/TFusion/app/src/main/res/layout/fragment_tutor.xml" value="0.35104166666666664" />
         <entry key="..\:/Android Practice/TFusion/app/src/main/res/layout/layout_video_list.xml" value="0.1" />
+        <entry key="..\:/Android Practice/TFusion/app/src/main/res/layout/pending_row_layout.xml" value="0.67" />
+        <entry key="..\:/Android Practice/TFusion/app/src/main/res/layout/student_row_layout.xml" value="0.5" />
         <entry key="..\:/Android Practice/TFusion/app/src/main/res/layout/teacher_row_layout.xml" value="0.35104166666666664" />
         <entry key="..\:/Android Practice/TFusion/app/src/main/res/layout/video_list_layout.xml" value="0.36666666666666664" />
         <entry key="..\:/Android Practice/TFusion/app/src/main/res/menu/drawer_menu.xml" value="0.35104166666666664" />
