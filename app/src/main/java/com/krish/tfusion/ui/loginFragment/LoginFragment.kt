@@ -69,7 +69,7 @@ class LoginFragment : Fragment() {
                     currentUser.user = getStudentMapped(user)
                     Log.d(TAG, "onDataChange: ${currentUser.user}")
                 }
-                val action = LoginFragmentDirections.actionLoginFragmentToHomeFragment2(user = currentUser)
+                val action = LoginFragmentDirections.actionLoginFragmentToHomeFragment2(currentUser)
                 findNavController().navigate(action)
             }
 

@@ -1,11 +1,11 @@
 package com.krish.tfusion.ui.postVideo
 
 import android.os.Bundle
-import android.util.Log
 import android.util.Patterns
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import com.google.firebase.database.FirebaseDatabase
@@ -13,11 +13,12 @@ import com.krish.tfusion.databinding.FragmentPostVideoBinding
 import com.krish.tfusion.model.Video
 
 private const val TAG = "PostVideoFragment"
+
 class PostVideoFragment : Fragment() {
 
     private lateinit var binding: FragmentPostVideoBinding
     private val args by navArgs<PostVideoFragmentArgs>()
-    private val mFirebaseDatabase : FirebaseDatabase by lazy { FirebaseDatabase.getInstance() }
+    private val mFirebaseDatabase: FirebaseDatabase by lazy { FirebaseDatabase.getInstance() }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -26,13 +27,23 @@ class PostVideoFragment : Fragment() {
         binding = FragmentPostVideoBinding.inflate(inflater, container, false)
 
         binding.btnUpload.setOnClickListener {
-            val title = binding.etTitle.text.toString().trim { it<=' '}
-            val description = binding.etVideoDescription.text.toString().trim{ it<=' '}
-            var videoLink = binding.etVideoLink.text.toString().trim{it<= ' '}
+            val title = binding.etTitle.text.toString().trim { it <= ' ' }
+            val description = binding.etVideoDescription.text.toString().trim { it <= ' ' }
+            var videoLink = binding.etVideoLink.text.toString().trim { it <= ' ' }
             val currentTutor = args.currentTutor!!
-            if (validateTitle(title) && validateDescription(description) && validateVideoLink(videoLink)){
+            if (validateTitle(title) && validateDescription(description) && validateVideoLink(
+                    videoLink
+                )
+            ) {
                 videoLink = formatLink(videoLink)
-                val video = Video(currentTutor.username,currentTutor.imageUrl,currentTutor.uid,title,description,videoLink)
+                val video = Video(
+                    currentTutor.username,
+                    currentTutor.imageUrl,
+                    currentTutor.uid,
+                    title,
+                    description,
+                    videoLink
+                )
                 uploadVideoToDatabase(video)
                 clearFields()
             }
@@ -51,10 +62,10 @@ class PostVideoFragment : Fragment() {
         val ref = mFirebaseDatabase.reference.child("videos").child("${video.uid}").push()
         ref.setValue(video)
             .addOnSuccessListener {
-                Log.d(TAG, "Video Uploaded Success")
+                Toast.makeText(requireContext(), "Video Upload Success", Toast.LENGTH_SHORT).show()
             }
             .addOnFailureListener {
-                Log.d(TAG, "Video Upload Failure")
+                Toast.makeText(requireContext(), "Video Upload Failure", Toast.LENGTH_SHORT).show()
             }
     }
 

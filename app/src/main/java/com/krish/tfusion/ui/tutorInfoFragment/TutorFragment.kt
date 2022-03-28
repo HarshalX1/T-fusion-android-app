@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.google.firebase.auth.*
 import com.google.firebase.database.FirebaseDatabase
@@ -18,6 +19,7 @@ import com.google.firebase.storage.FirebaseStorage
 import com.krish.tfusion.databinding.FragmentTutorBinding
 import com.krish.tfusion.model.Teacher
 import com.krish.tfusion.model.User
+import com.krish.tfusion.R
 import java.util.*
 
 private const val TAG = "TutorFragment"
@@ -145,7 +147,7 @@ class TutorFragment : Fragment() {
         val user = User(true, tutor)
         ref.setValue(user)
             .addOnSuccessListener {
-                Log.d(TAG, "saveUserToDatabase: This is working")
+                findNavController().navigate(R.id.action_tutorFragment_to_loginFragment)
             }
     }
 

@@ -5,12 +5,14 @@ import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
+import com.krish.tfusion.R
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.google.firebase.auth.*
 import com.google.firebase.database.FirebaseDatabase
@@ -142,7 +144,7 @@ class StudentFragment : Fragment() {
         val user = User(false, student)
         ref.setValue(user)
             .addOnSuccessListener {
-                Log.d(TAG, "saveUserToDatabase: This is working")
+                findNavController().navigate(R.id.action_studentFragment_to_loginFragment)
             }
     }
 

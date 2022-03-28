@@ -69,7 +69,7 @@ class AllFragment : Fragment() {
                 }
 
                 override fun onCancelled(error: DatabaseError) {
-                    TODO("Not yet implemented")
+                    Log.d(TAG, "${error.message}")
                 }
 
             })

@@ -59,6 +59,11 @@ class HomeFragment : Fragment(), CourseClick {
                     navigateFromHomeToFriends()
                     true
                 }
+                R.id.logout -> {
+                    mAuth.signOut()
+                    findNavController().navigate(R.id.action_homeFragment2_to_loginFragment)
+                    true
+                }
                 else -> false
             }
         }
@@ -88,7 +93,7 @@ class HomeFragment : Fragment(), CourseClick {
                 }
 
                 override fun onCancelled(error: DatabaseError) {
-                    TODO("Not yet implemented")
+                    Log.d(TAG, "${error.message}")
                 }
 
             })
